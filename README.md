@@ -1,13 +1,25 @@
+### Tool Name: **DLLDrifter**
+
 **Description:**
 
-DLLDrifter is a powerful Windows tool designed for advanced users and developers interested in process manipulation and memory editing. With its robust features, PhantomInjector allows you to:
+DLLDrifter is a versatile Windows utility designed for developers and reverse engineers to explore and manipulate running processes through dynamic-link library (DLL) injection and memory editing. With DLLDrifter, you can seamlessly enhance your applications and gain insights into their inner workings. 
 
-Seamlessly Inject DLLs: Effortlessly inject custom dynamic-link libraries (DLLs) into target processes, enabling modifications, enhancements, or debugging within the process’s address space.
+**Key Features:**
 
-Extract Function Addresses: Retrieve the addresses of specific functions within loaded modules, providing you with the ability to hook or call functions directly from external processes.
+- **Effortless DLL Injection**: Instantly inject custom DLLs into target processes, allowing for real-time modifications, debugging, or enhancements of application behavior.
 
-Process and Module Management: Quickly enumerate running processes and their modules, making it easy to locate and interact with target applications.
+- **Dynamic Function Address Retrieval**: Retrieve and interact with specific functions from loaded modules, enabling you to hook, override, or extend functionalities without altering the original binary.
 
-Anti-Cheat Evasion: Designed with a keen awareness of anti-cheat mechanisms, PhantomInjector incorporates features to detect and bypass certain safeguards, allowing for deeper process analysis and manipulation.
+- **Process Management**: Quickly list and filter running processes to easily identify targets for injection or analysis.
 
-Whether you're a developer debugging applications, a security researcher analyzing software behavior, or an enthusiast exploring the depths of Windows internals, PhantomInjector provides the tools you need for effective process manipulation. Use responsibly and ethically, as the power of PhantomInjector comes with great responsibility.
+- **Anti-Cheat Evasion**: Equipped with features to detect and navigate around basic anti-cheat mechanisms, DLLDrifter is perfect for security researchers and enthusiasts looking to understand software behavior.
+
+- **User-Friendly Interface**: Designed with a straightforward command-line interface, DLLDrifter allows for easy usage and integration into various workflows.
+
+**Important Note**: DLLDrifter is intended for educational purposes, security research, and software development. Always ensure you have permission to modify and interact with the software you target to avoid ethical and legal issues.
+
+**Usage**: Clone this repository and follow the instructions in the README to get started with DLLDrifter. Dive deep into process manipulation and discover the hidden capabilities of your applications!
+
+---
+
+Feel free to adjust any part of the description to better fit your style or the specific functionalities of your tool!
