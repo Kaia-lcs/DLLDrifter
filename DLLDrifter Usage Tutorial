@@ -1,0 +1,120 @@
+# **DLLDrifter Usage Tutorial**
+
+## **Table of Contents**
+
+1. [Prerequisites](#prerequisites)
+2. [Setting Up the Development Environment](#setting-up-the-development-environment)
+3. [Code Overview](#code-overview)
+4. [Building the Tool](#building-the-tool)
+5. [Using DLLDrifter](#using-dlldrifter)
+6. [Example Use Cases](#example-use-cases)
+7. [Important Notes](#important-notes)
+
+---
+
+## **1. Prerequisites**
+
+Before you begin, ensure you have the following:
+
+- **Windows Operating System**: This tool is designed for Windows, so you need a compatible version (Windows 7 or later).
+- **Visual Studio**: Install Visual Studio with C++ development tools. You can download the Community Edition for free from the [Visual Studio website](https://visualstudio.microsoft.com/vs/community/).
+- **Basic Knowledge of C++**: Familiarity with C++ and command-line usage will help you understand the code and how to interact with the tool.
+
+---
+
+## **2. Setting Up the Development Environment**
+
+1. **Install Visual Studio**:
+   - Download and install Visual Studio from the official website.
+   - During installation, select the “Desktop development with C++” workload.
+
+2. **Create a New Project**:
+   - Open Visual Studio and select **Create a new project**.
+   - Choose **Console App** from the templates and click **Next**.
+   - Name your project `DLLDrifter` and choose a location to save it, then click **Create**.
+
+3. **Add Required Libraries**:
+   - Ensure you have access to `Psapi.lib` in your project settings, as it’s required for the code. This is typically included in Visual Studio, but verify by checking:
+     - Right-click on your project in Solution Explorer.
+     - Select **Properties**.
+     - Navigate to **Linker** > **Input** and make sure `Psapi.lib` is in the **Additional Dependencies**.
+
+---
+
+## **3. Code Overview**
+
+Here’s a brief overview of the key functionalities in the code:
+
+- **GetProcessId**: Retrieves the process ID of a running application by name.
+- **GetModuleBaseAddress**: Finds the base address of a specified module within a target process.
+- **GetProcAddressEx**: Retrieves the address of a specified function from a loaded module in the target process.
+- **inject_dll**: Injects a DLL into the target process, allowing you to modify its behavior.
+- **bypass**: Includes methods to check for and potentially bypass anti-cheat mechanisms.
+
+You will need to modify the code with your specific target process and DLL information (see the **Using DLLDrifter** section).
+
+---
+
+## **4. Building the Tool**
+
+1. **Copy and Paste the Code**:
+   - In Visual Studio, open the `main.cpp` file (or the equivalent main file).
+   - Copy and paste the provided C++ code into this file.
+
+2. **Modify the Target Process and DLL**:
+   - Update the following variables in the `main` function:
+     ```cpp
+     const wchar_t* targetProcess = L"your_target_process.exe"; // Replace with target process name
+     const wchar_t* moduleName = L"your_target_module.dll"; // Replace with target module name
+     const char* functionName = "your_target_function"; // Replace with target function name
+     const char* dllPath = "C:\\path\\to\\your\\dll.dll"; // Replace with the full path to your DLL
+     ```
+   - Ensure the target process is running before you execute the tool.
+
+3. **Build the Project**:
+   - Click on **Build** in the menu and select **Build Solution** (or press `Ctrl + Shift + B`).
+   - Ensure there are no compilation errors. If there are, check the code for any typos or issues.
+
+---
+
+## **5. Using DLLDrifter**
+
+1. **Run the Tool**:
+   - Open a command prompt with administrative privileges (right-click and select "Run as administrator").
+   - Navigate to the output directory where your compiled executable is located (usually in the `Debug` or `Release` folder of your project).
+   - Run the executable:
+     ```
+     DLLDrifter.exe
+     ```
+
+2. **Observe Output**:
+   - The tool will display messages indicating the success or failure of operations, such as retrieving process IDs, module addresses, and function addresses.
+
+3. **DLL Injection**:
+   - The tool will attempt to inject the specified DLL into the target process, allowing you to modify its behavior as specified in your DLL.
+
+---
+
+## **6. Example Use Cases**
+
+- **Injecting a Custom DLL**: If you have a DLL that modifies the behavior of a game or application, specify its path in the `dllPath` variable and run DLLDrifter to inject it into the target process.
+  
+- **Hooking Functions**: Use `GetProcAddressEx` to find and hook specific functions within a module for monitoring or modification.
+
+- **Testing Anti-Cheat Mechanisms**: If you are a researcher, use the bypass functions to check how certain applications handle modifications.
+
+---
+
+## **7. Important Notes**
+
+- **Ethical Use**: DLLDrifter is intended for educational and development purposes. Always ensure you have permission to modify any software you interact with to avoid legal issues.
+  
+- **Error Handling**: The code includes basic error handling, but you may want to enhance it for robustness, especially for production use.
+
+- **Running with Admin Privileges**: Some functionalities require administrative privileges, especially when accessing other processes.
+
+- **Backup and Testing**: Always back up important data and test in a controlled environment to avoid unintended consequences.
+
+---
+
+By following this tutorial, you should be able to set up, build, and use your **DLLDrifter** tool effectively. :D
