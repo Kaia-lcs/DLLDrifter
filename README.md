@@ -1,6 +1,6 @@
 **Description:**
 
-PhantomInjector is a powerful Windows tool designed for advanced users and developers interested in process manipulation and memory editing. With its robust features, PhantomInjector allows you to:
+DLLDrifter is a powerful Windows tool designed for advanced users and developers interested in process manipulation and memory editing. With its robust features, PhantomInjector allows you to:
 
 Seamlessly Inject DLLs: Effortlessly inject custom dynamic-link libraries (DLLs) into target processes, enabling modifications, enhancements, or debugging within the process’s address space.
 
