@@ -18,8 +18,4 @@ DLLDrifter is a versatile Windows utility designed for developers and reverse en
 
 **Important Note**: DLLDrifter is intended for educational purposes, security research, and software development. Always ensure you have permission to modify and interact with the software you target to avoid ethical and legal issues.
 
-**Usage**: Clone this repository and follow the instructions in the README to get started with DLLDrifter. Dive deep into process manipulation and discover the hidden capabilities of your applications!
-
----
-
-Feel free to adjust any part of the description to better fit your style or the specific functionalities of your tool!
+**Usage**: Clone this repository and follow the instructions in the DLLDrifter Usage Tutorial to get started with DLLDrifter. Dive deep into process manipulation and discover the hidden capabilities of your applications!
